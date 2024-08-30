@@ -5,10 +5,10 @@ class Solution:
 
         while left <= right:
             mid = (left + right) // 2
-
-            if mid**2 > num:
+            m2 = mid*mid
+            if m2 > num:
                 right = mid - 1
-            elif mid**2 < num:
+            elif m2 < num:
                 left = mid + 1
             else:
                 return True
