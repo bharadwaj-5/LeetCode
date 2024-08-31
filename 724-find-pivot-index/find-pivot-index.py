@@ -6,10 +6,10 @@ class Solution:
         for i in range(len(nums)):
             right -= nums[i]
 
-            if right == left:
+            if left == right:
                 return i
 
             left += nums[i]
-        
+
         return -1
 
