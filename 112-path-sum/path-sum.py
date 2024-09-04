@@ -9,16 +9,12 @@ class Solution:
         def ps(root, total):
             if not root:
                 return False
-
             total += root.val
-            
+
             if not root.left and not root.right:
                 return total == targetSum
             
-            return ps(root.left, total) or ps(root.right, total)
+            return ps(root.right, total) or ps(root.left, total)
 
         return ps(root, 0)
-
-
-
         
