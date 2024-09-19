@@ -15,8 +15,7 @@ class Solution:
             res.append(node.val)
             preorder(node.left)
             preorder(node.right)
-
+        
         preorder(root)
-
         return res
         
