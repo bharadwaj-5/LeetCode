@@ -1,12 +1,11 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        p = 0
-        for n in nums:
-            if p < 0:
-                return False
-            elif n > p:
-                p = n
-            p -= 1
-            
-        return True
+        n = len(nums)
+        goal = n - 1
+
+        for i in range(n - 2, -1, -1):
+            if i + nums[i] >= goal:
+                goal = i
+        
+        return goal == 0
         
