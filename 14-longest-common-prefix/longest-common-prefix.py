@@ -7,7 +7,7 @@ class Solution:
 
         o = ''
 
-        for i in range(min(len(a), len(b))):
+        for i in range(len(a)):
             if a[i] != b[i]:
                 return o
             o += a[i]
