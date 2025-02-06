@@ -12,11 +12,10 @@ class Solution:
 
         res = 0
 
-        for i in range(len(s)):
+        for i in range(0, len(s)):
             if i < len(s) - 1 and m[s[i]] < m[s[i + 1]]:
                 res -= m[s[i]]
             else:
                 res += m[s[i]]
-
         return res
         
