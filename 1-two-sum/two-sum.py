@@ -5,3 +5,4 @@ class Solution:
             if target - v in hashMap:
                 return [i, hashMap[target - v]]
             hashMap[v] = i
+        
